@@ -1,0 +1,32 @@
+<html>
+<body>
+    <h1>Anagram website</h1>
+    <p>This anagram application can be used anywhere,even in your browser.
+    You can find the docs for the api bellow.</p>
+    <hr>
+
+    <form action="http://localhost:5000/" method="post">
+        <input type="radio" id="option_1" name="option" value="1" checked>
+        <label for="option_1">scramble the word</label>
+        <input type="radio" id="option_2" name="option" value="2">
+        <label for="option_2">unscramble the word</label><br>
+        <label for="inputted_word">Please enter in your word:</label><br>
+        <input type="text" id="inputted_word" name="input" value = {{word}}><br>
+        <input type="submit" value="Submit">
+    </form>
+    <label for="result">results:</label><br>
+  <textarea id = result class="textarea" placeholder="Results goes here" readonly>{{result}}</textarea>
+    <hr>
+    <h2>GET Syntax</h2>
+    <hr>
+    <p>You can use the get method in this format at the back of the link,
+    option=x&input=y .The options for x can be 1 to scramble or 2 to unscramble.
+    The options for y can be any valid scrambled words or just words,
+    like the word hello,or the scrambled version of hello.
+    </p>
+    <br>
+    <p>The example of the syntax is <code>http://localhost:5000/api/v1/option=1&input=hello</code></p>
+    <hr>
+    <h2>POST Syntax</h2>
+</body>
+</html>
